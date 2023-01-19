@@ -143,13 +143,14 @@ class Excel():
     def ocultar_planilha(self, planilha):
         planilha.sheet_state = 'hidden'
         
-    def estilo(self, planilha, celula, tamanho, cor, negrito, alinhamento):
+    def estilo(self, planilha, celula, tamanho, cor, negrito, alinhamento, borda=True):
         planilha[celula].font = Font(size=tamanho, b=negrito)
         if alinhamento == True:
             planilha[celula].alignment = Alignment(horizontal="center", vertical="center")
         planilha[celula].fill = PatternFill("solid", fgColor=cor)
-        thin = Side(border_style="thick", color="000000")
-        planilha[celula].border = Border(top=thin, left=thin, right=thin, bottom=thin)
+        if borda == True:
+            thin = Side(border_style="thick", color="000000")
+            planilha[celula].border = Border(top=thin, left=thin, right=thin, bottom=thin)
         
     def mesclar(self, planilha, intervalo):
         planilha.merge_cells(intervalo)
@@ -157,7 +158,15 @@ class Excel():
     def escrever(self, planilha, celula, texto):
         planilha[celula].value = texto
         
-    def grafico_linha(self, grafico, dados, df, titulo, x, y, c):
+    def inserir_linha(self, planilha, numero, quantidade):
+        for n in range(0, quantidade):
+            planilha.insert_rows(numero)
+                
+    def inserir_coluna(self, planilha, numero, quantidade):
+        for n in range(0, quantidade):
+            planilha.insert_cols(numero)
+        
+    def grafico_linha(self, grafico, dados, df, titulo, x, y, c, n="#,##0.00"):
         df = df[[x, y]].sort_values(by=[x],ignore_index=True, ascending=True)
         for r in dataframe_to_rows(df, index=True, header=True):
             dados.append(r)
@@ -185,7 +194,7 @@ class Excel():
             cell.number_format = "DD-MM"
             
         for cell in dados["B"]:
-            cell.number_format = "0.00"
+            cell.number_format = n
             
         for s in ["A", "B"]:
             for cell in dados[s]:

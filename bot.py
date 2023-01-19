@@ -18,7 +18,7 @@ class Programa():
         self.__token = token
         self.__bot = telebot.TeleBot(token, parse_mode='Markdown')
 
-    def comando(self, comando, mensagem):
+    def comando_mensagem(self, comando, mensagem):
         @self.__bot.message_handler(commands=[comando])
         def funcao_comando(message):
             self.__bot.reply_to(message, mensagem)

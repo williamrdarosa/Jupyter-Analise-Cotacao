@@ -1,6 +1,16 @@
 import telebot
 from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from datetime import datetime
+import os
+from dotenv import load_dotenv, find_dotenv
+
+def codigos(usuario):
+    load_dotenv(find_dotenv())
+    return os.environ.get(usuario)
+    
+def data_agora():
+    return f'{datetime.now():%d/%m/%Y %H:%M}'
 
 class Programa():
 

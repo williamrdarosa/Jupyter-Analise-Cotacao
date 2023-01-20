@@ -11,6 +11,7 @@ from openpyxl.chart import (
     Reference,
 )
 from openpyxl.chart.label import DataLabelList
+import fitz
 
 dir_path = os.path.dirname(os.path.realpath('__file__'))
 
@@ -24,6 +25,10 @@ def imprimir(n, nome):
     work_sheets = sheets.Worksheets[n]
     work_sheets.ExportAsFixedFormat(0, f'{dir_path}\\{nome}.pdf')
     sheets.Close(True)
+    doc = fitz.open(f'{dir_path}\\{nome}.pdf')
+    page = doc.load_page(0)
+    pix = page.get_pixmap()
+    pix.save(f'{dir_path}\\{nome}.png')
 
 class Tabela():
     

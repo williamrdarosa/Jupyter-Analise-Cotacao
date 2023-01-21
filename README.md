@@ -3,6 +3,11 @@
 
 ![Tela Inicial](https://williamrdarosa.com.br/wp-content/uploads/2023/01/Tela-Jupyter-Cotacao.png)
 
+## Requisitos
+
+Precisa que baixe a pasta com as funções e coloque do lado da pasta do projeto.
+ - [Diretório das Funções](https://github.com/williamrdarosa/Funcoes)
+
 ## Links
 
 - [Apresentação](https://docs.google.com/presentation/d/e/2PACX-1vRaxRTd02-mPb_evHkt1WEBGtS4_chL7IhZ8ymBoaHHm-UpOKyRGFxRGKqIAb0fL-6xdnHnQOeLVUy6/pub?start=false&loop=false&delayms=3000)

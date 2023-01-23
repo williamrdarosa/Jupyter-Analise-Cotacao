@@ -14,6 +14,8 @@ Precisa que baixe a pasta com as funções e coloque do lado da pasta do projeto
 
 - [Vídeo Youtube](https://www.youtube.com/watch?v=7GEeuIdtYcg)
 
+- [Post Site](https://williamrdarosa.com.br/apresentacao-jupyter-lab-openpyxl)
+
 ## Motivações para o projeto
 
 ### Treinar Conhecimentos

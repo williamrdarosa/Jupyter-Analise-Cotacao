@@ -1,5 +1,5 @@
 # Jupyter Analise Cotacao
- Jupyter Notebook para Analise de Dados API de Cotação de Moedas
+ Jupyter Notebook para Analise de Dados API de Cotação de Moedas e Nomes IBGE
 
 ![Tela Inicial](https://williamrdarosa.com.br/wp-content/uploads/2023/01/Tela-Jupyter-Cotacao.png)
 
@@ -11,6 +11,8 @@ Precisa que baixe a pasta com as funções e coloque do lado da pasta do projeto
 ## Links
 
 - [Apresentação](https://docs.google.com/presentation/d/e/2PACX-1vRaxRTd02-mPb_evHkt1WEBGtS4_chL7IhZ8ymBoaHHm-UpOKyRGFxRGKqIAb0fL-6xdnHnQOeLVUy6/pub?start=false&loop=false&delayms=3000)
+
+- [Vídeo Youtube](https://www.youtube.com/watch?v=7GEeuIdtYcg)
 
 ## Motivações para o projeto
 
